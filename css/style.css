@@ -1,0 +1,160 @@
+/*-------------------------------------------------------------------------------------*/
+/*------------------------------------- GLOBAL ----------------------------------------*/
+/* -------- Balises et class appelés à plusieurs endroits dans la page---------------- */
+/*-------------------------------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box; /*Je précise ma box-sizing (pour une width qui prenne le padding)*/
+    outline: none; /*Pour que les éléments sur lequel le user clique ne soient pas encadrés en bleu*/
+    /*border: 3px dotted rgba(0,0,0,0.3);*/ /* Visualisation des éléments en leur mettant une border à tout */
+}
+
+body {
+	margin: 0; /*Je colle mon body aux dimensions de la page web*/
+}
+
+a, a:hover, a:visited, a:active {
+    text-decoration: none; /*Ne souligne pas les liens*/
+    cursor: crosshair;
+}
+
+/* Cacher un élément */
+.hidden {display: none}
+
+/* Mettre en gras un élément */
+.bold {font-weight: bold}
+
+body {
+    background-image: url('../img/wallpaper1.jpg');
+}
+
+
+
+/*-------------------------------------------------------------------------------------*/
+/*------------------------------------- HEADER ----------------------------------------*/
+/* --------------------- Ce qui concerne le header et la nav ------------------------- */
+/*-------------------------------------------------------------------------------------*/
+
+h1 {
+    color: #dedfe0;
+    margin-left: 10%;
+}
+
+
+
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------- MAIN -----------------------------------------*/
+/* ------------------------ Ce qui concerne le corps du site ------------------------- */
+/*-------------------------------------------------------------------------------------*/
+
+/* canvas de dessin*/
+#slate {
+    background-color: #dedfe0;
+    box-shadow: 0 0 15px 1px #2C3E50;
+    border: 2px solid #569A93;/* pas mettre, sinon décale le trait d'autant ! */
+    border-radius: 15px;
+    margin: 2% 0 2% 10%;
+    cursor: crosshair;
+}
+
+/* canvas de nuancier */
+#color-palette {
+    box-shadow: 0 0 15px 1px #2C3E50;
+    border: 2px solid #569A93;/* pas mettre, sinon décale le trait d'autant ! */
+    border-radius: 15px;
+    cursor: crosshair;
+    margin: 0 0 15% 2%;
+}
+
+
+hr {
+    margin-bottom: 2%;
+    color: #dedfe0;
+}
+
+form {
+    color: #dedfe0;
+    margin-left: 2%;
+}
+
+.formParts {
+    margin: 0.5% 0;
+}
+
+button {
+    cursor: crosshair;
+    margin: 0 0.25%;
+    background-color: #dedfe0;
+    color: #511F23;
+}
+
+input {
+    cursor: pointer;
+}
+
+input[name="colorButton"] {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 100%;
+    margin: 0 0.5%;
+}
+
+input[name="colorButton"]:hover {
+    animation: bounce 0.30s ease infinite alternate; 
+    }
+
+        @keyframes bounce {
+            from {
+                transform :translateY(0); /* état de départ : pas encore bougé sur axe Y */
+            }
+            to {
+                transform :translateY(-10px); /* état de fin : est descendu de Xpx sur axe Y */
+            }
+        }
+
+#formColors label {
+    vertical-align: 13px; 
+}
+
+#colorBlack {
+    background-color: #000000;
+    box-shadow: 0 0 15px 1px #2C3E50;
+}
+
+#colorBrown {
+    background-color: #511F23;
+    box-shadow: 0 0 15px 1px #2C3E50;
+}
+
+#colorRed {
+    background-color: #A9122A;
+    box-shadow: 0 0 15px 1px #2C3E50;
+}
+
+#colorYellow {
+    background-color: #E9BB3F;
+    box-shadow: 0 0 15px 1px #2C3E50;
+}
+
+#colorGreen {
+    background-color: #62BB25;
+    box-shadow: 0 0 15px 1px #2C3E50;
+}
+
+#colorLightBlue {
+    background-color: #569A93;
+    box-shadow: 0 0 15px 1px #2C3E50;
+}
+
+#colorBlue {
+    background-color: #44709F;
+    box-shadow: 0 0 15px 1px #2C3E50;
+}
+
+
+
+/*-------------------------------------------------------------------------------------*/
+/*------------------------------------- FOOTER ----------------------------------------*/
+/* --------------------------- Ce qui concerne le footer ----------------------------- */
+/*-------------------------------------------------------------------------------------*/

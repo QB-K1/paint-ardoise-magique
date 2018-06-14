@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<!-- Ici début de mon entête de document qui est invisible dans la page-->
+	<head>
+		<!-- Ici mon titre qui apparaît uniquement dans l'onglet du navigateur-->
+		<title>Ardoise Magique</title>
+		<!-- Ici l'appel des bons alphabets et signes-->
+		<meta charset="utf-8"/>
+		<!--Reset la taille du visible en mobile/tablette, évite zooms-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<!-- Ici l'appel de la base d'icones-->
+		<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+		<!-- Ici l'appel du JQuery-->
+		<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+		<!-- Ici l'appel du fichier CSS reset.css-->
+		<link type="text/css" rel="stylesheet" href="css/reset.css"/>
+		<!-- Ici l'appel du fichier CSS normalize.css-->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" media="all" />
+		<!-- Ici l'appel du fichier CSS style.css-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+	</head>
+	<!-- Fin de l'entête du document-->
+	<!-- Ici début du corps visible dans la page-->
+	<body>
+	<!--Ici début du header-->
+		<header>
+
+			<h1 class="bold"><i class="fas fa-paint-brush"></i> Ardoise Magique <i class="fas fa-chess"></i></h1>
+
+		</header>
+		<!--Ici fin du header-->
+		<!--Ici début du conteneur principal-->
+		<main>
+
+			<canvas id="slate" class="slate" width="700" height="580"></canvas>
+
+			<canvas width="250" height="250" hidden="hidden" id="color-palette" class="color-palette hide"></canvas>
+
+			<hr/>
+
+			<form method="post" name="formCanvas">
+
+				<section class="formParts" id="formOutils">
+
+					<label for="brushType" class="bold">Outils</label>
+					<button type="button" name="brushType" value="buttonDraw" class="buttonDraw"><i class="fas fa-pencil-alt"></i></i></button>
+					<button type="button" name="brushType" value="buttonEraser" class="buttonEraser"><i class="fas fa-undo"></i></button>
+					<button type="button" name="brushType" value="buttonEraserLocal" class="buttonEraserLocal"><i class="fas fa-eraser"></i></button>
+					<button type="button" name="brushType" value="buttonPipette" class="buttonPipette"><i class="fas fa-eye-dropper"></i></button>
+
+				</section><br/>
+
+				<section class="formParts" id="formColors">
+
+					<label for="colorButton" class="bold">Couleurs</label>
+					<input type="button" name="colorButton" class="colorButton" id="colorBlack" data-color="#000000"/>
+					<input type="button" name="colorButton" class="colorButton" id="colorBrown" data-color="#511F23"/>
+					<input type="button" name="colorButton" class="colorButton" id="colorRed" data-color="#A9122A"/>
+					<input type="button" name="colorButton" class="colorButton" id="colorYellow" data-color="#E9BB3F"/>
+					<input type="button" name="colorButton" class="colorButton" id="colorGreen" data-color="#62BB25"/>
+					<input type="button" name="colorButton" class="colorButton" id="colorLightBlue" data-color="#569A93"/>
+					<input type="button" name="colorButton" class="colorButton" id="colorBlue" data-color="#2C3E50"/>
+
+				</section><br/>
+
+				<section class="formParts" id="formThickness">
+
+					<label for="pencilThickness" class="bold">Epaisseur</label>
+					<button type="button" name="pencilThickness" class="pencilThickness" value="buttonPencilThin" data-size="1">Fin</button>
+					<button type="button" name="pencilThickness" class="pencilThickness" value="buttonPencilRegular" data-size="5">Normal</button>
+					<button type="button" name="pencilThickness" class="pencilThickness" value="buttonPencilRegular" data-size="10">Epais</button>
+
+				</section>
+
+			</form>
+
+		</main>
+		<!-- Ici fin du conteneur principal-->
+		<!-- Ici le footer-->
+		<footer>
+		</footer>
+		<!-- Ici fin du footer-->
+		<!-- Ici appel du JS-->
+		<script type="text/javascript" src="js/Pen.class.js"></script>
+		<script type="text/javascript" src="js/ColorPalette.class.js"></script>
+		<script type="text/javascript" src="js/Slate.class.js"></script>
+		<script type="text/javascript" src="js/Program.class.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+	<!-- Ici fin du corps visible dans la page-->
+</html>
